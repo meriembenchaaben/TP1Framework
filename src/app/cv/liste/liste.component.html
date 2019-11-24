@@ -1,0 +1,7 @@
+
+<div *ngFor= "let person  of persons">
+
+  <app-item [person]="person" (CvDisplaying)="getPerson($event)"></app-item>
+
+</div>
+

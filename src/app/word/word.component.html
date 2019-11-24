@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      color :<input type="color" class="form-control" [(ngModel)]="couleur" >
+      Taille : <input type="number" class="form-control" [(ngModel)]="taille" appArcEnCiel>
+
+      Police :
+      <select class="form-control"(change)="changePolice($event.target.value)">
+        <option *ngFor="let police of polices" [value]="police">{{police}}</option>
+      </select>
+
+      <select class="form-control" [(ngModel)]="selectedItem" class="col-lg-6">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+      </select>
+      <p [ngClass]="{classRed:selectedItem=='red',classYellow:selectedItem=='yellow',classBlue:selectedItem=='blue'}" class="col-lg-6">
+        this One should change
+      </p>
+
+    </div>
+
+    <p [ngStyle]="{color : couleur,
+                    fontSize : taille+'px',
+                    fontFamily : selectedPolice
+                  }" class="col-lg-6">
+        Meriem is not having so much fun !
+    </p>
+
+
+  </div>
+</div>
