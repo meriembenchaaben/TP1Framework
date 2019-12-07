@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Person} from '../../shared/models/Person';
+import {Subscription} from 'rxjs';
+import {CvService} from '../../shared/services/cv.service';
 
 @Component({
   selector: 'app-liste',
@@ -9,19 +11,22 @@ import {Person} from '../../shared/models/Person';
 export class ListeComponent implements OnInit {
 
   persons: Person[];
-  @Output() CvDisplaying = new EventEmitter() ;
+  subscription: Subscription;
+  @Output() CvDisplaying = new EventEmitter();
 
-  constructor() {
-    this.persons = [new Person(1, 'Meriem', '1'), new Person (2, 'Hassen', '2'), new Person(3, 'Zeineb', '3')];
+  constructor(private cvService: CvService) {
 
   }
 
   ngOnInit() {
+    this.subscription = this.cvService.cvsChanged.subscribe(
+      cv => this.persons = cv
+    );
+    this.persons = this.cvService.getCvs();
   }
+
   getPerson(MyPerson) {
-
     this.CvDisplaying.emit(MyPerson);
-
   }
 
 }

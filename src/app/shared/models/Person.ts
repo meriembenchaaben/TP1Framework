@@ -7,17 +7,10 @@ export class Person {
   cin: number;
   job: string;
   path: string;
+  embauche: boolean;
 
-  // tslint:disable-next-line:max-line-length
-  constructor(id: number = null,
-              nom: string = '',
-              path: string = null,
-              prenom: string = '',
-              age: number = null,
-              cin: number = null,
-              job: string = null,
-              ) {
 
+  constructor(id: number = null, nom: string = '', path: string = null, prenom: string = '', age: number = null, cin: number = null, job: string = null, embauche: boolean = false) {
     this.id = id;
     this.nom = nom;
     this.prenom = prenom;
@@ -25,5 +18,6 @@ export class Person {
     this.cin = cin;
     this.job = job;
     this.path = path;
+    this.embauche = embauche;
   }
 }

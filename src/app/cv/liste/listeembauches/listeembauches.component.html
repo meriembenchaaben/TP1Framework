@@ -1,0 +1,6 @@
+<h2 *ngIf="cvs.length"> Liste des cv embauchers</h2>
+<div *ngFor="let person  of cvs">
+
+  <app-item [person]="person" (CvDisplaying)="getPerson($event)"></app-item>
+
+</div>

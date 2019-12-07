@@ -13,6 +13,8 @@ import {FormsModule} from '@angular/forms';
 import { ArcEnCielDirective } from './arc-en-ciel.directive';
 import { DefaultImagePipe } from './default-image.pipe';
 import { SliderComponent } from './slider/slider.component';
+import { ListeembauchesComponent } from './cv/liste/listeembauches/listeembauches.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { SliderComponent } from './slider/slider.component';
     WordComponent,
     ArcEnCielDirective,
     DefaultImagePipe,
-    SliderComponent
+    SliderComponent,
+    ListeembauchesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
