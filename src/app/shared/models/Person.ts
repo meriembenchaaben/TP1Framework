@@ -10,6 +10,7 @@ export class Person {
   embauche: boolean;
 
 
+  // tslint:disable-next-line:max-line-length
   constructor(id: number = null, nom: string = '', path: string = null, prenom: string = '', age: number = null, cin: number = null, job: string = null, embauche: boolean = false) {
     this.id = id;
     this.nom = nom;

@@ -52,6 +52,7 @@
           <div style="text-align:center;">
           <div *ngIf="!person.embauche">
             <button class="btn-sm btn-primary" (click)="embaucher()">Embaucher</button>
+            <button class="btn-sm btn-primary" (click)="details()">details</button>
           </div>
           <div *ngIf="person.embauche">
             <button class="btn-sm btn-primary">Is working</button>
@@ -69,4 +70,6 @@
     </div> <!-- end back panel -->
   </div> <!-- end card -->
 </div>
+
+<app-more-details *ngIf="show" [person]="person"></app-more-details>
 

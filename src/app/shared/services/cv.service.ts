@@ -6,7 +6,7 @@ import {Subject} from 'rxjs';
   providedIn: 'root'
 })
 export class CvService {
-  private cvs: Person[] = [new Person(1, 'Meriem', '1'), new Person(2, 'Hassen', '2'), new Person(3, 'Zeineb', '3')];
+  private cvs: Person[] = [new Person(1, 'Meriem', '1', 'Ben Chaaben', 23, 20000000, 'student'), new Person(2, 'Hassen', '2', 'dupont', 25, 25852258), new Person(3, 'Zeineb', '3', 'someone', 32)];
   cvsChanged = new Subject<Person[]>();
 
   constructor() {
@@ -33,4 +33,7 @@ export class CvService {
     this.cvsChanged.next(this.cvs.slice());
   }
 
+  getCv(id: number) {
+    return(this.cvs[id]);
+  }
 }

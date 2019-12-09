@@ -15,6 +15,7 @@ import { DefaultImagePipe } from './default-image.pipe';
 import { SliderComponent } from './slider/slider.component';
 import { ListeembauchesComponent } from './cv/liste/listeembauches/listeembauches.component';
 import { HeaderComponent } from './header/header.component';
+import { MoreDetailsComponent } from './cv/more-details/more-details.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HeaderComponent } from './header/header.component';
     DefaultImagePipe,
     SliderComponent,
     ListeembauchesComponent,
-    HeaderComponent
+    HeaderComponent,
+    MoreDetailsComponent
   ],
   imports: [
     BrowserModule,
