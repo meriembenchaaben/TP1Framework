@@ -2,7 +2,7 @@ import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {Person} from '../../shared/models/Person';
 import {CvService} from '../../shared/services/cv.service';
 import {CvEmbauchesService} from '../../shared/services/cv-embauches.service';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-detail',

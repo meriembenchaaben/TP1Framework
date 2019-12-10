@@ -22,8 +22,11 @@ export class CvService {
   }
 
   removeCv(cv: Person) {
-    this.cvs.splice(this.cvs.findIndex(value => cv));
-    this.cvsChanged.next(this.cvs.slice());
+    let index = this.cvs.findIndex(value => cv);
+    console.log(index);
+    this.cvs.splice(index,1);
+    console.log("done");
+    console.log(this.cvs);
   }
 
   editCv(cv: Person) {

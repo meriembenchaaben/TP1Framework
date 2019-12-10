@@ -1,0 +1,25 @@
+<br>
+<br>
+<br>
+
+<div class="form-group " class="offset-2 col-md-6 ">
+
+  <form (ngSubmit)="onSubmit(formulaire)"  #formulaire="ngForm">
+
+    <input class="text form-control" type="text" name="Name" placeholder="{{person.nom}}" ngModel required="">
+    <br>
+    <input class="text email form-control" type="tex" name="prenom" placeholder="{{person.prenom}}" ngModel required="">
+    <br>
+    <input class="text form-control "  name="age" placeholder="{{person.age}}" ngModel >
+    <br>
+    <input class="text form-control "  name="job" placeholder="{{person.job}}" ngModel >
+    <br>
+    <input class="text form-control "  name="cin" placeholder="{{person.cin}}" ngModel >
+    <br>
+
+
+    <input class="btn btn-1 btn-danger changeColor " [disabled]="!formulaire.form.valid"type="submit" value="sign up">
+    <input class="btn btn-1 btn-success changeColor offset-2 " [disabled]="!formulaire.form.dirty" (click)="reset(formulaire)" value="reset">
+  </form>
+
+</div>

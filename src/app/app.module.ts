@@ -16,6 +16,7 @@ import { SliderComponent } from './slider/slider.component';
 import { ListeembauchesComponent } from './cv/liste/listeembauches/listeembauches.component';
 import { HeaderComponent } from './header/header.component';
 import { MoreDetailsComponent } from './cv/more-details/more-details.component';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MoreDetailsComponent } from './cv/more-details/more-details.component';
     SliderComponent,
     ListeembauchesComponent,
     HeaderComponent,
-    MoreDetailsComponent
+    MoreDetailsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
