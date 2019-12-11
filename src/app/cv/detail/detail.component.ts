@@ -19,6 +19,10 @@ export class DetailComponent implements OnInit,OnChanges {
   }
 
   ngOnInit() {
+    this.cvService.refresh.subscribe(() => {
+      this.show = false;
+      this.person = new Person();
+    });
   }
   ngOnChanges() {
     this.show = false;
@@ -32,5 +36,6 @@ export class DetailComponent implements OnInit,OnChanges {
   details() {
     this.show = true;
   }
+
 
 }

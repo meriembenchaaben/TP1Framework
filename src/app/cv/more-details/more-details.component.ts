@@ -10,6 +10,7 @@ import {CvService} from '../../shared/services/cv.service';
 export class MoreDetailsComponent implements OnInit {
 
   @Input() person: Person;
+
   constructor(private cvService: CvService) { }
 
   ngOnInit() {
@@ -17,5 +18,6 @@ export class MoreDetailsComponent implements OnInit {
 
   delete() {
     this.cvService.removeCv(this.person);
+    console.log("lalal"+this.person.id);
   }
 }

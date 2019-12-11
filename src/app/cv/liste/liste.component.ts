@@ -23,8 +23,15 @@ export class ListeComponent implements OnInit {
       cv => this.persons = cv
     );
     this.persons = this.cvService.getCvs();
+
+    this.cvService.refresh.subscribe(() => {
+      this.getPersons();
+    });
   }
 
+  getPersons() {
+    this.persons = this.cvService.getCvs();
+  }
   getPerson(MyPerson) {
     this.CvDisplaying.emit(MyPerson);
   }
